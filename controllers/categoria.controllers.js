@@ -52,7 +52,7 @@ const getCategoria = async(req, res = response ) => {
 
     const { id } = req.params;
     const categoria = await Categoria.findById( id )
-                            .populate('usuario', 'nombre');
+            .populate('usuario', 'nombre');
 
     res.json( categoria );
 
